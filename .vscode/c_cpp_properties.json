@@ -5,6 +5,7 @@
 			"name": "Linux (Debug)",
 			"includePath": [
 				"${workspaceFolder}/build-linux-debug/_deps/spdlog-src/include/",
+				"${workspaceFolder}/build-linux-debug/_deps/glfw-src/include/",
 				"${workspaceFolder}/Game/include/",
 				"/usr/include"
 			],
@@ -23,6 +24,7 @@
 			"name": "Linux (Release)",
 			"includePath": [
 				"${workspaceFolder}/build-linux-release/_deps/spdlog-src/include/",
+				"${workspaceFolder}/build-linux-release/_deps/glfw-src/include/",
 				"${workspaceFolder}/Game/include/",
 				"/usr/include"
 			],
