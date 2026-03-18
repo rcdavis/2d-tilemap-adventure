@@ -30,6 +30,10 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug")
         LOGGING_ENABLED
         ASSERTS_ENABLED
     )
+else()
+    target_compile_definitions(Game PUBLIC
+        NDEBUG
+    )
 endif()
 
 target_include_directories(Game PUBLIC
