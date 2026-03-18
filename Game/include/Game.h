@@ -16,6 +16,8 @@ private:
 	void Update();
 	void Render();
 
+	void QueryRenderSpecs();
+
 	static void GlfwErrorCallback(int error, const char* description);
 
 private:
