@@ -2,6 +2,13 @@ project(Game)
 
 include(FetchContent)
 
+FetchContent_Declare(
+    glfw
+    GIT_REPOSITORY https://github.com/glfw/glfw.git
+    GIT_TAG 3.4
+)
+FetchContent_MakeAvailable(glfw)
+
 set(SPDLOG_HEADER_ONLY ON CACHE BOOL "" FORCE)
 set(SPDLOG_BUILD_SHARED OFF CACHE BOOL "" FORCE)
 set(SPDLOG_BUILD_EXAMPLE OFF CACHE BOOL "" FORCE)
@@ -16,7 +23,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(spdlog)
 
 add_executable(Game
+    glad/src/glad.c
     src/Utils/Log.cpp
+    src/Game.cpp
     src/Main.cpp
 )
 
@@ -38,8 +47,14 @@ endif()
 
 target_include_directories(Game PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/glad/include
 )
+
+cmake_policy(SET CMP0072 NEW)
+find_package(OpenGL REQUIRED)
 
 target_link_libraries(Game PUBLIC
     spdlog::spdlog_header_only
+    glfw
+    OpenGL::GL
 )
