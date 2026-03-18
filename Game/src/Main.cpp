@@ -1,6 +1,10 @@
-#include <iostream>
+
+#include "Utils/Log.h"
 
 int main(int argc, char** argv) {
-	std::cout << "Hello, world!" << std::endl;
+	Log::Init();
+
+	LOG_INFO("Hello, 2D Tilemap Adventure!");
+
 	return 0;
 }
