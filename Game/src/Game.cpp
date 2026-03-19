@@ -160,6 +160,8 @@ uint32_t Game::LoadTexture(const char* path) {
 		return 0;
 	}
 
+	LOG_INFO("Loaded texture '{0}' (width: {1}, height: {2}, channels: {3})", path, width, height, channels);
+
 	uint32_t texture;
 	glCreateTextures(GL_TEXTURE_2D, 1, &texture);
 
