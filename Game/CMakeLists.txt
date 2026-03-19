@@ -29,6 +29,10 @@ add_executable(Game
     src/Main.cpp
 )
 
+# Probably not the best way to do this, but it works for now
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/res
+     DESTINATION ${CMAKE_BINARY_DIR}/Game)
+
 target_compile_definitions(Game PUBLIC
     GLFW_INCLUDE_NONE
 )
