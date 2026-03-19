@@ -8,6 +8,7 @@
 				"${workspaceFolder}/build-linux-debug/_deps/glfw-src/include/",
 				"${workspaceFolder}/Game/include/",
 				"${workspaceFolder}/Game/glad/include/",
+				"${workspaceFolder}/Game/stb/include/",
 				"/usr/include"
 			],
 			"defines": [
@@ -28,6 +29,7 @@
 				"${workspaceFolder}/build-linux-release/_deps/glfw-src/include/",
 				"${workspaceFolder}/Game/include/",
 				"${workspaceFolder}/Game/glad/include/",
+				"${workspaceFolder}/Game/stb/include/",
 				"/usr/include"
 			],
 			"defines": [

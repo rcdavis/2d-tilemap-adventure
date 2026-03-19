@@ -27,6 +27,7 @@ add_executable(Game
     src/Utils/Log.cpp
     src/Game.cpp
     src/Main.cpp
+    stb/src/stb_image.c
 )
 
 # Probably not the best way to do this, but it works for now
@@ -52,6 +53,7 @@ endif()
 target_include_directories(Game PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${CMAKE_CURRENT_SOURCE_DIR}/glad/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/stb/include
 )
 
 cmake_policy(SET CMP0072 NEW)
