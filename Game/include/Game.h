@@ -1,5 +1,7 @@
 #pragma once
 
+#include <stdint.h>
+
 struct GLFWwindow;
 
 class Game {
@@ -18,8 +20,12 @@ private:
 
 	void QueryRenderSpecs();
 
+	uint32_t LoadTexture(const char* path);
+
 	static void GlfwErrorCallback(int error, const char* description);
 
 private:
 	GLFWwindow* mWindow;
+
+	uint32_t mTestImage;
 };
