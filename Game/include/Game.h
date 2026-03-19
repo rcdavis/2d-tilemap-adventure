@@ -20,8 +20,6 @@ private:
 
 	void QueryRenderSpecs();
 
-	uint32_t LoadTexture(const char* path);
-
 	static void GlfwErrorCallback(int error, const char* description);
 
 private:

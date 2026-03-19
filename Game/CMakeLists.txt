@@ -24,6 +24,7 @@ FetchContent_MakeAvailable(spdlog)
 
 add_executable(Game
     glad/src/gl.c
+    src/Utils/GLUtils.cpp
     src/Utils/Log.cpp
     src/Game.cpp
     src/Main.cpp
