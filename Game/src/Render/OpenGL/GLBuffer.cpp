@@ -56,6 +56,6 @@ void GLIndexBuffer::Unbind() const {
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 }
 
-std::shared_ptr<GLIndexBuffer> GLIndexBuffer::Create(const unsigned short* indices, unsigned int count, BufferUsage usage) {
+std::shared_ptr<GLIndexBuffer> GLIndexBuffer::Create(const uint16_t* indices, uint32_t count, BufferUsage usage) {
 	return std::make_shared<GLIndexBuffer>(indices, count, usage);
 }

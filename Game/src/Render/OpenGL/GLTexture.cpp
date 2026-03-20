@@ -61,10 +61,6 @@ GLTexture::GLTexture(const std::filesystem::path& filepath) {
 
 	LOG_INFO("Loaded texture '{0}' (width: {1}, height: {2}, channels: {3})", filepath.c_str(), mWidth, mHeight, channels);
 
-
-	// TODO: Do I need this?
-	//glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, mWidth, mHeight, DataFormatToGLType(mDataFormat), GL_UNSIGNED_BYTE, data);
-
 	stbi_image_free(data);
 }
 
