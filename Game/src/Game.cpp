@@ -6,14 +6,15 @@
 #include "stb_image.h"
 
 #include "Utils/Log.h"
-#include "Utils/GLUtils.h"
+
+#include "Render/OpenGL/GLTexture.h"
 
 static void APIENTRY GLDebugCallback(GLenum source, GLenum type, GLuint id, GLenum severity,
 	GLsizei length, const GLchar* message, const void* userParam);
 
 Game::Game() :
 	mWindow(nullptr),
-	mTestImage(0)
+	mTestTexture(nullptr)
 {}
 
 Game::~Game() {
@@ -80,7 +81,7 @@ bool Game::Init() {
 	glEnable(GL_DEPTH_TEST);
 	glClearColor(1.0f, 0.0f, 1.0f, 1.0f);
 
-	mTestImage = GLUtils::LoadTexture("res/textures/overworld.png");
+	mTestTexture = GLTexture::Load("res/textures/overworld.png");
 
 	LOG_INFO("Game initialized successfully.");
 
@@ -90,10 +91,7 @@ bool Game::Init() {
 void Game::Shutdown() {
 	LOG_INFO("Shutting down game.");
 
-	if (mTestImage) {
-		glDeleteTextures(1, &mTestImage);
-		mTestImage = 0;
-	}
+	mTestTexture = nullptr;
 
 	glfwTerminate();
 	mWindow = nullptr;

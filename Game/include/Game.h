@@ -1,8 +1,10 @@
 #pragma once
 
 #include <stdint.h>
+#include <memory>
 
 struct GLFWwindow;
+class GLTexture;
 
 class Game {
 public:
@@ -25,5 +27,5 @@ private:
 private:
 	GLFWwindow* mWindow;
 
-	uint32_t mTestImage;
+	std::shared_ptr<GLTexture> mTestTexture;
 };
