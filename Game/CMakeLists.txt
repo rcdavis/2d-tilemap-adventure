@@ -24,10 +24,16 @@ FetchContent_MakeAvailable(spdlog)
 
 add_executable(Game
     glad/src/gl.c
+    src/Utils/GLUtils.cpp
     src/Utils/Log.cpp
     src/Game.cpp
     src/Main.cpp
+    stb/src/stb_image.c
 )
+
+# Probably not the best way to do this, but it works for now
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/res
+     DESTINATION ${CMAKE_BINARY_DIR}/Game)
 
 target_compile_definitions(Game PUBLIC
     GLFW_INCLUDE_NONE
@@ -48,6 +54,7 @@ endif()
 target_include_directories(Game PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${CMAKE_CURRENT_SOURCE_DIR}/glad/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/stb/include
 )
 
 cmake_policy(SET CMP0072 NEW)

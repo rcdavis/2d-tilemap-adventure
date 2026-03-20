@@ -1,5 +1,7 @@
 #pragma once
 
+#include <stdint.h>
+
 struct GLFWwindow;
 
 class Game {
@@ -22,4 +24,6 @@ private:
 
 private:
 	GLFWwindow* mWindow;
+
+	uint32_t mTestImage;
 };
