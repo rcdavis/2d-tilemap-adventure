@@ -6,6 +6,7 @@
 			"includePath": [
 				"${workspaceFolder}/build-linux-debug/_deps/spdlog-src/include/",
 				"${workspaceFolder}/build-linux-debug/_deps/glfw-src/include/",
+				"${workspaceFolder}/build-linux-debug/_deps/glm-src/",
 				"${workspaceFolder}/Game/include/",
 				"${workspaceFolder}/Game/glad/include/",
 				"${workspaceFolder}/Game/stb/include/",
@@ -27,6 +28,7 @@
 			"includePath": [
 				"${workspaceFolder}/build-linux-release/_deps/spdlog-src/include/",
 				"${workspaceFolder}/build-linux-release/_deps/glfw-src/include/",
+				"${workspaceFolder}/build-linux-release/_deps/glm-src/",
 				"${workspaceFolder}/Game/include/",
 				"${workspaceFolder}/Game/glad/include/",
 				"${workspaceFolder}/Game/stb/include/",
